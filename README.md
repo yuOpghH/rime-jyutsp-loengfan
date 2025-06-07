@@ -28,6 +28,9 @@ jyutsp-goi - 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两
  ## 使用
 下載安裝[Rime](https://rime.im/)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
    
+- android trime skin
+ - [下載](https://github.com/yuOpghH/rime-jyutsp-goi/tree/main/trime) ，部署即可。
+ - [預覽](https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/trime.jpg)
 ## 致謝
 - 感謝以下項目的無私貢獻及項目成果。可能有遺漏敬請原諒。
  - 鍵盤設置來源：[jyutsp粵語雙拼](https://github.com/MrCorn0-0/jyutsp/)
@@ -47,10 +50,8 @@ jyutsp-goi - 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两
 
 #### 展示
 <p align="center">
-<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp-loengfan.gif"  style="width:380px;"/>
+<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp-loengfan-2.gif"  style="width:380px;"/>
 </p>
-- 輸 = s + y(yu) + c(車ce) <br>
-- 嘅 = g + e + h(口hau)
 
 # 學習文檔
 沿用[jyutsp_goi粵語雙拼倉頡輔助碼輸入法](https://github.com/yuOpghH/rime-jyutsp_goi)的說明文檔：
