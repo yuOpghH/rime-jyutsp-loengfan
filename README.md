@@ -23,7 +23,7 @@ jyutsp-goi - loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双
 | :------- | ------: | -------: |  -------: |  -------: |  -------: |  -------: |  -------: | 
 | [jyutsp-real <br>粵語雙拼<br>純雙拼](https://github.com/yuOpghH/rime-jyutsp-real)  | 低。僅需記憶鍵位映射 | 大量重複音節 | ✓ | ✓ |  |  | 
 | [jyutsp-loengfan<br>粵語雙拼<br>兩分輔助碼](https://github.com/yuOpghH/rime-jyutsp-loengfan)   | 較低。幾乎可見可拆 | 能初步篩選同部首 | ✓ | ✓ | ✓ |  | 
-| [jyutsp-real<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [jyutsp-goi<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
 
  ## 使用
  - pc windows rime
