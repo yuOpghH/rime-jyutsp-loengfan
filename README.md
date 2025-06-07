@@ -45,6 +45,13 @@ jyutsp-goi - 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两
   - j鍵兼容y鍵聲母輸出(而非兼容z鍵)
   - v鍵兼容z鍵聲母輸出
 
+#### 展示
+<p align="center">
+<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp-loengfan.gif"  style="width:380px;"/>
+</p>
+- 輸 = s + y(yu) + c(車ce) <br>
+- 嘅 = g + e + h(口hau)
+
 # 學習文檔
 沿用[jyutsp_goi粵語雙拼倉頡輔助碼輸入法](https://github.com/yuOpghH/rime-jyutsp_goi)的說明文檔：
 
