@@ -1,0 +1,214 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jyutsp_leongfan
+  name: "粵語雙拼(兩分輔助碼)"
+  version: "2021-04-14"
+  author:
+    - jyutsp < MrCorn0-0 >
+    - LeiMaau <leimaau@qq.com>
+  description: |
+   以真雙拼碼表實現jyutsp的雙拼，非以拼寫運算。不依賴任何文檔，甚至不要連反查文檔都可以不需要。
+   無有固定字最簡詞表 。反查：Q:倉頡反查 W:粵拼反查 E:普拼反查（假如有的話）
+  dependencies:
+    - luna_pinyin
+    - cangjie5
+    - jyut6ping3
+switches:
+  - options: [zh_simp,zh_hant,zh_hk,zh_tw]  # 多種字形轉換方案，根據需要自行開啓
+    reset: 3
+    states:
+      - 字形 → 大陸
+      - 字形 → 繁體
+      - 字形 → 香港
+      - 字形 → 臺灣
+  - name: simplification
+    states: [ 漢字, 漢字 ]
+  #- name: ascii_mode
+    #reset: 1
+    #states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor 
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@jyut6ping3
+    - affix_segmentor@cangjie5
+    - affix_segmentor@luna_pinyin
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - script_translator@jyut6ping3
+    - script_translator@cangjie5
+    - script_translator@luna_pinyin
+  filters:
+    - reverse_lookup_filter@reverse_lookup
+    - simplifier@zh_simp2  # 多字形濾鏡，根據需要自行開啓
+    - simplifier@zh_hant
+    - simplifier@zh_hk
+    - simplifier@zh_tw
+    - uniquifier
+    #- single_char_filter
+
+
+########翻譯器########
+speller:
+  #alphabet: zyxwvutsrqponmlkjihgfedcba;[]\890
+  alphabet: zyxwvutsrqponmlkjihgfedcba[]\ZYXWVUTSRQPONMLKJIHGFEDCBA;
+  delimiter: " `" #"`" #" '"
+  algebra:
+    #- derive/^([a-z]).+$/$1/           # 簡拼（首字母）
+    - derive/^([z])([a-z;][a-z;][a-z;])$/v$2/  #便捷打
+    - derive/^([c])([a-z;][a-z;][a-z;])$/i$2/  #便捷打
+    - derive/^([s])([a-z;][a-z;][a-z;])$/u$2/  #便捷打
+    - derive/^([y])([a-z;][a-z;][a-z;])$/j$2/  #便捷打
+
+    - fuzz/^([a-z;]{2}).+$/$1/
+    - fuzz/^([a-z;])([a-z;])([a-z]).+$/$1$2$3/
+    
+
+translator:
+  dictionary: jyutsp_leongfan
+  prism: jyutsp_leongfan
+  db_class: tabledb
+  spelling_hints: 10 
+  #enable_charset_filter: 是否開啓字符集過濾〔僅table_translator有效〕
+  enable_encoder: true #是否開啓自動造詞〔僅table_translator有效〕
+  encode_commit_history: true #是否對已上屛詞自動成詞〔僅table_translator有效〕
+  enable_user_dict: true #是否開啓用戶詞典〔用戶詞典記錄動態字詞頻、用戶詞〕
+  enable_sentence: true #是否開啓自動造句〕
+  #enable_completion: true #提前顯示尚未輸入完整碼的字〔僅table_translator有效
+  preedit_format:
+
+###############反查#############
+
+reverse_lookup: #反查顯示 
+  dictionary: jyutsp_leongfan
+  spelling_hints: 12
+  comment_format:
+
+cangjie5:    # 倉頡
+  tag: cangjie5
+  dictionary: cangjie5
+  #prism: jyut6ping3
+  enable_user_dict: false
+  prefix: "Q:"
+  suffix: ";"
+  tips: 〔倉頡〕
+  closing_tips: 〔廣州話〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口屍廿山女田難卜符|"
+
+jyut6ping3: #粵拼
+  tag: jyut6ping3
+  dictionary: jyut6ping3
+  enable_user_dict: false
+  prefix: "W:"
+  suffix: ;
+  preedit_format:
+    - xform/([aeioumngptk])vv/$1⁴/
+    - xform/([aeioumngptk])xx/$1⁵/
+    - xform/([aeioumngptk])qq/$1⁶/
+    - xform/([aeioumngptk])v/$1¹/
+    - xform/([aeioumngptk])x/$1²/
+    - xform/([aeioumngptk])q/$1³/
+  tips: 〔粵拼〕
+  closing_tips: 〔粵語雙拼〕
+
+luna_pinyin:    # 普拼反查粵拼
+  tag: luna_pinyin
+  dictionary: luna_pinyin
+  enable_user_dict: false
+  prefix: "E:"
+  suffix: ";"
+  tips: 〔普拼〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+########自定義按鍵 ###########
+punctuator:
+  import_preset: symbols
+
+
+key_binder:
+  import_preset: default 
+  bindings:
+    #分號選第2候選字
+    #- {accept: semicolon, send: 2, when: has_menu} 
+    #- {accept: "Control+Alt_L", send: 2, when: has_menu}
+    #- {accept: "Control+Alt_R", send: 3, when: has_menu}
+    #單引號選第3候選字
+    - {accept: apostrophe, send: 2, when: has_menu} 
+    - {accept: Control+q , toggle: simplification,when: always }
+    - {accept: "Control+1", send: 6, when: has_menu}
+    - {accept: "Control+2", send: 7, when: has_menu}
+    - {accept: "Control+3", send: 8, when: has_menu}
+    - {accept: "Control+4", send: 9, when: has_menu}
+    - {accept: "Control+5", send: 10, when: has_menu}
+
+
+recognizer:
+  import_preset: default
+  patterns:
+    stroke: "R:[hspnz]*'?$"
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
+    cangjie5: "Q:[a-z]*'?$"   #倉頡反查  "`[a-z]*'?$" 
+    jyut6ping3: "W:[a-z|;]*'?$" #粵拼反查"Q:[a-z|;]*'?$" 
+    luna_pinyin: "E:[a-z]*'?$" #普拼反查
+
+
+
+ascii_composer: #廢除shift 以上碼大字母
+  switch_key:
+    #Shift_L: noop
+    #Shift_R: noop
+
+############字形###############
+
+zh_simp2:  # 多字形根據需要自行開啓
+  option_name: zh_simp
+  opencc_config: t2s.json
+  tips: none
+
+
+#zh_hant:
+  #option_name: zh_hant
+  #opencc_config: #s2t.json
+  #tips: none
+
+zh_hk:
+  option_name: zh_hk
+  #opencc_config: t2hk.json
+  opencc_config: t2hkf.json
+  tips: none
+
+zh_tw:
+  option_name: zh_tw
+  opencc_config: t2tw.json
+  tips: none
+
+#s2twp.json Simplified Chinese to Traditional Chinese (Taiwan Standard) with Taiwanese idiom 簡體到繁體（臺灣正體標準）並轉換爲臺灣常用詞彙
+#tw2sp.json Traditional Chinese (Taiwan Standard) to Simplified Chinese with Mainland Chinese idiom 繁體（臺灣正體標準）到簡體並轉換爲中國大陸常用詞彙
+############自定義詞典###############
