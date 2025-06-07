@@ -14,7 +14,7 @@ jyutsp-goi - 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两
    - in jyutsp-leongfan：`蒜 = s + r(yun) + c (艹cou2) + s(示si6) = srcs`
  - 注意（與原兩分的差異）：
    <br>為了降低重碼率，<br>兩分拆分字音作以下調整：`gw > x`， `kw > q` ， `ng > r`
-    - 例：`啩（gwaa） = x(gw) + a(aa) + h(口hau) + <b>x(卦gwaa)</b> = xahx`
+    - 例：`啩（gwaa） = x(gw) + a(aa) + h(口hau) + x(卦gwaa) = xahx`
 
 
 ##### 感興趣的話歡迎瀏覽其他方案版本：
