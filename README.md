@@ -26,15 +26,18 @@ jyutsp-goi - 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两
 | [jyutsp-real<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
 
  ## 使用
-下載安裝[Rime](https://rime.im/)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
+ - pc windows rime
+   - 下載安裝[Rime](https://rime.im/)，下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/1.0)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
+
+-----
+ - android（安卓） trime skin 27鍵主題
+   - [下載](https://github.com/yuOpghH/rime-jyutsp-goi/tree/main/trime) ，部署到trime文件夾，再部署即可。
+   - [預覽](https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/trime.jpg)
    
-- android trime skin
- - [下載](https://github.com/yuOpghH/rime-jyutsp-goi/tree/main/trime) ，部署即可。
- - [預覽](https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/trime.jpg)
 ## 致謝
 - 感謝以下項目的無私貢獻及項目成果。可能有遺漏敬請原諒。
- - 鍵盤設置來源：[jyutsp粵語雙拼](https://github.com/MrCorn0-0/jyutsp/)
- - 輔助碼：[粵語兩分](https://github.com/CanCLID/rime-loengfan)
+   - 鍵盤設置來源：[jyutsp粵語雙拼](https://github.com/MrCorn0-0/jyutsp/)
+   - 輔助碼：[粵語兩分](https://github.com/CanCLID/rime-loengfan)
 
 # 輸入編碼
 ## 碼表
