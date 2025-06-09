@@ -1,5 +1,5 @@
 # rime-jyutsp-loengfan
-jyutsp-goi - loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两分码 方案 / Rime Cantonese mixed leongfan two-key per character(Double Pinyin) input schema
+jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两分码 方案 / Rime Cantonese mixed leongfan two-key per character(Double Pinyin) input schema
 
 基於[rime-jyutsp-real jyutsp-real 粵語雙拼輸入法（純雙拼真雙拼方案）](https://github.com/yuOpghH/rime-jyutsp-real)的改進，在雙拼基礎上添加以[粵語兩分](https://github.com/CanCLID/rime-loengfan)的輔助碼。
 
