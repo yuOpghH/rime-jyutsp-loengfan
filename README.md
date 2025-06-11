@@ -28,7 +28,7 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
  ## 使用
  leongfan（純血版）為原兩分（僅調整gw、kw、ng聲母）
  
- newloengfan（進階版）為新定改版兩分（分離更多獨立部首、實用性更強、學門成本也更高），具體參照[粵語雙拼新定兩分碼表](粵語雙拼新定兩分碼表)
+ newloengfan（進階版）為新定改版兩分（分離更多獨立部首、實用性更強、學門成本也更高），具體參照 [1. 粵語雙拼新定兩分碼表](#1-粵語雙拼新定兩分碼表)
 
 -----
  
@@ -61,7 +61,7 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 <img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp-loengfan-2.gif"  style="width:380px;"/>
 </p>
 
-##### 粵語雙拼新定兩分碼表
+##### 1. 粵語雙拼新定兩分碼表
 
  - 此僅為進階版，非純血版，純血版依舊原兩分方案
 
