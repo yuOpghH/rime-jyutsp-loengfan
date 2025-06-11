@@ -26,6 +26,12 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 | [jyutsp-goi<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
 
  ## 使用
+ leongfan（純血版）為原兩分（僅調整gw、kw、ng聲母）
+ 
+ newloengfan（進階版）為新定改版兩分（分離更多獨立部首、實用性更強、學門成本也更高），具體參照[粵語雙拼新定兩分碼表](粵語雙拼新定兩分碼表)
+
+-----
+ 
  - pc windows rime
    - 下載安裝[Rime](https://rime.im/)，下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/1.0)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
 
@@ -47,7 +53,6 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 [zhihu]:https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/keyboard.jpg "碼表"
 
 - 鍵位與原雙拼方案碼表的差異：
-  - j鍵開頭的音節變成以y鍵輸出為主
   - j鍵兼容y鍵聲母輸出(而非兼容z鍵)
   - v鍵兼容z鍵聲母輸出
 
@@ -55,6 +60,18 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 <p align="center">
 <img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp-loengfan-2.gif"  style="width:380px;"/>
 </p>
+
+##### 粵語雙拼新定兩分碼表
+
+ - 此僅為進階版，非純血版，純血版依舊原兩分方案
+
+<p align="center">
+<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp_newloengfan.png" "/>
+</p>
+
+ - 進階版
+   - 為了解決粵語兩分中，將常用部首的“扌”“氵”同音位S、“言”“亻”“日”“月”同音位Y等等分離，
+   - 參考小鶴、兩分等字根劃分。學習成本為需通過諧音、聯想、無理等記憶多十餘鍵位的新部首，從而提高部首篩選能力。
 
 # 學習文檔
 沿用[jyutsp_goi粵語雙拼倉頡輔助碼輸入法](https://github.com/yuOpghH/rime-jyutsp_goi)的說明文檔：
