@@ -13,8 +13,9 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
  - 例：蒜 = 艹 (cou2) + 示 (si6)
    - in jyutsp-leongfan：`蒜 = s + r(yun) + c (艹cou2) + s(示si6) = srcs`
  - 注意（與原兩分的差異）：
-   <br>為了降低重碼率，<br>兩分拆分字音作以下調整：`gw > x`， `kw > q` ， `ng > r`
+   <br>為了降低重碼率，<br>兩分拆分字音作以下調整：`gw > x`， `kw > q`  、`ng > r` 、[零聲母](https://zh.wikipedia.org/zh-hk/%E9%9B%B6%E8%81%B2%E6%AF%8D)（元音開頭的音節）` > e`
     - 例：`啩（gwaa） = x(gw) + a(aa) + h(口hau) + x(卦gwaa) = xahx`
+    - 例：`啊（eahe） = e(零聲母) + a(aa) + h(口hau) + e(阿ea) = eahe`
 
 
 ##### 感興趣的話歡迎瀏覽其他方案版本：
@@ -26,7 +27,7 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 | [jyutsp-goi<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
 
  ## 使用
- leongfan（純血版）為原兩分（僅調整gw、kw、ng聲母）
+ leongfan（純血版）為原兩分（僅調整、eng、gw、kw聲母）
  
  newloengfan（進階版）為新定改版兩分（分離更多獨立部首、實用性更強、學門成本也更高），具體參照 [1. 粵語雙拼新定兩分碼表](#1-粵語雙拼新定兩分碼表)
 
