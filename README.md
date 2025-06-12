@@ -66,7 +66,7 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
  - 此僅為進階版，非純血版，純血版依舊原兩分方案
 
 <p align="center">
-<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp_newloengfan.png" "/>
+<img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/jyutsp_newloengfan%202025-06-12.png"/>
 </p>
 
  - 進階版
