@@ -34,7 +34,7 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 -----
  
  - pc windows rime
-   - 下載安裝[Rime](https://rime.im/)，下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/2.0)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
+   - 下載安裝[Rime](https://rime.im/)，下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/2.1)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
 
 -----
  - android（安卓） trime skin 27鍵主題
