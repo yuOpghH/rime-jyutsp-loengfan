@@ -1,6 +1,12 @@
 # rime-jyutsp-loengfan
 jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 两分码 方案 / Rime Cantonese mixed leongfan two-key per character(Double Pinyin) input schema
 
+<h1 align="center">
+ 
+<p align="center"><a href="https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/2.2"><img src="https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/download-button.jpg" style="width: 150px;"/></a></p>
+
+</h1>
+
 基於[rime-jyutsp-real jyutsp-real 粵語雙拼輸入法（純雙拼真雙拼方案）](https://github.com/yuOpghH/rime-jyutsp-real)的改進，在雙拼基礎上添加以[粵語兩分](https://github.com/CanCLID/rime-loengfan)的輔助碼。
 
  基於[兩分輔助碼](http://www.yedict.com/)下，幾乎即見即拆輸出輔助碼，在入門成本大降情況下，加強單字輸出、組詞分別的能力（但由於不存在固頂字詞、對輔助碼重複部份無特別優化排重固定作序。）。
@@ -8,6 +14,12 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
  默認輸出台灣標準正體、僅提供最基礎單字快碼。極簡配置：無有固定字詞、無簡拼、最簡詞表。
  
  反查：`Q:`倉頡反查 `W:`粵拼反查 `E:`普拼反查（假如有選用的話）
+ 
+<h1 align="center">
+ 
+<img src="https://github.com/yuOpghH/rime-jyutsp-loengfan/blob/main/%E5%B1%95%E7%A4%BA%E5%9C%96%E7%89%87/2026-11-21.png" style="width: 500px;"/></a>
+
+</h1>
 
 #### 兩分是何物？
  - 例：蒜 = 艹 (cou2) + 示 (si6)
@@ -16,7 +28,6 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
    <br>為了降低重碼率，<br>兩分拆分字音作以下調整：`gw > x`， `kw > q`  、`ng > r` 、[零聲母](https://zh.wikipedia.org/zh-hk/%E9%9B%B6%E8%81%B2%E6%AF%8D)（元音開頭的音節）` > e`
     - 例：`啩（gwaa） = x(gw) + a(aa) + h(口hau) + x(卦gwaa) = xahx`
     - 例：`啊（eahe） = e(零聲母) + a(aa) + h(口hau) + e(阿ea) = eahe`
-
 ##### 感興趣的話歡迎瀏覽其他方案版本：
 
 | 粵語雙拼方案 | 學習成本 | 揀字率 | 連續雙碼長句輸出 | 一鍵快碼 | 輔助碼篩選字詞 | 字詞固頂 | 簡拼輸出長詞
@@ -26,22 +37,34 @@ jyutsp-loengfan 粵語雙拼+两分輔助碼輸入法方案。 / 粤语双拼 + 
 | [jyutsp-goi<br>粵語雙拼<br>倉頡輔助碼](https://github.com/yuOpghH/rime-jyutsp-goi)  | 較高。120個倉頡字根 | 三千字內5.8% | ✓ | ✓ | ✓ | ✓ | ✓ |
 
  ## 使用
- leongfan（純血版）為原兩分（僅調整、eng、gw、kw聲母）
+
  
- newloengfan（進階版）為新定改版兩分（分離更多獨立部首、實用性更強、學門成本也更高），具體參照 [1. 粵語雙拼新定兩分碼表](#1-粵語雙拼新定兩分碼表)
+##### 本專案兩分對比：
+| 本專案兩分對比 | 學習成本 | 揀字率 | 連續雙碼長句輸出 | 一鍵快碼 | 輔助碼篩選字詞 | 字詞固頂 | 拆解提示濾鏡
+| :------- | ------: | -------: |  -------: |  -------: |  -------: |  -------: |  -------: | 
+| leongfan（純血版） | 記憶全拼到雙拼鍵位映射、幾乎可見可拆<br>（僅調整、eng、gw、kw聲母） | 大量重複音節 | ✓ | ✓ |  |  | 
+| newloengfan（新定兩分.進階版） | 以上基礎、多記憶十餘個字根、更快拆解常用字 | 能初步篩選同部首 | ✓ | ✓ | ✓ |  | 
+| newloengfan_goi（新定兩分.進階固定字版）  | 以上基礎、固定常用字、造詞方式、換取輸出速度、更快輸出常用字 | 常用字固定、熟後默出 | ✓ | ✓ | ✓ | ✓ | ✓ |
+ 
+ 
+- 造詞：輸出全詞後，僅需在後綴塞入“`”，可進入造詞模式，如輸出“群募” ，應打qfxj（群） + muml（募）+~號，即可上屏記錄。同時你仍可以在中間使用“`”作為分隔符亦可“qfxj（群） + +~號 + muml（募）+~號，”
+
+具體參照 [1. 粵語雙拼新定兩分碼表](#1-粵語雙拼新定兩分碼表)
 
 - 額外網址：[字海網首頁：兩分部首拆解查詢](http://www.yedict.com/)
   
 -----
  
  - pc windows rime
-   - 下載安裝[Rime](https://rime.im/)，下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/2.1)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
+   - 下載安裝[Rime](https://rime.im/)，依需要選擇下載[本方案](https://github.com/yuOpghH/rime-jyutsp-loengfan/releases/tag/2.1)，部署到“用户文件夾”，“輸入法設定”選中本方案，部署即可
 
+- 新定固輔碼造詞方式：
 -----
  - android（安卓） trime skin 27鍵主題
    - [下載](https://github.com/yuOpghH/rime-jyutsp-goi/tree/main/trime) ，部署到trime文件夾，再部署即可。
    - [預覽](https://github.com/yuOpghH/rime-jyutsp-goi/blob/main/%E5%B1%95%E7%A4%BA/trime.jpg)
    
+
 ## 致謝
 - 感謝以下項目的無私貢獻及項目成果。可能有遺漏敬請原諒。
    - 鍵盤設置來源：[jyutsp粵語雙拼](https://github.com/MrCorn0-0/jyutsp/)
